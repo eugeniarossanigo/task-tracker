@@ -67,3 +67,8 @@ footer {
     text-align: center;
     font-size: .8rem;
 }
+a {
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: .7rem;
+}

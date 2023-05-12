@@ -7,6 +7,7 @@ import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 import Footer from './components/Footer'
 import About from './components/About'
+import TasksDetails from './components/TasksDetails'
 
 function App() {
     const [tasks, setTasks] = useState([])
@@ -81,6 +82,7 @@ function App() {
                     </>
                     }  />
                     <Route path='/about' element={<About />} />
+                    <Route path='/task/:id' element={<TasksDetails />} />
                 </Routes>
                 <Footer />
             </div>
