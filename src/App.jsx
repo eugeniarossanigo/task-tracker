@@ -68,18 +68,18 @@ function App() {
                 <Header handleOpen={handleOpen} open={open}/>
                 {/* <Header handleOpen={() => setOpen(!open) }/> */}
                 <Routes>
-                    <Route path='/' exact render={(props) => (
+                    <Route path='/' element={
                         <>
-                            { open && <AddTask handleAdd={handleAdd}/> }
-                            <main>
-                            { tasks.length > 0 ?
-                                <Tasks tasks={tasks} handleDelete={handleDelete} toogleReminder={toogleReminder} />
-                                :
-                                <p>No tasks</p>
-                            }
-                            </main>
-                        </>
-                    )}  />
+                        { open && <AddTask handleAdd={handleAdd}/> }
+                        <main>
+                        { tasks.length > 0 ?
+                            <Tasks tasks={tasks} handleDelete={handleDelete} toogleReminder={toogleReminder} />
+                            :
+                            <p>No tasks</p>
+                        }
+                        </main>
+                    </>
+                    }  />
                     <Route path='/about' element={<About />} />
                 </Routes>
                 <Footer />
