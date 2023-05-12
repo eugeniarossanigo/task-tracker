@@ -17,24 +17,6 @@
       "text": "Food Shopping",
       "day": "Feb 5th at 2:30pm",
       "reminder": false
-    },
-    {
-      "text": "sdsad",
-      "day": "asdsd",
-      "reminder": true,
-      "id": 4
-    },
-    {
-      "text": "asds",
-      "day": "dsdsad",
-      "reminder": false,
-      "id": 5
-    },
-    {
-      "text": "sadsd",
-      "day": "sadsad",
-      "reminder": false,
-      "id": 6
     }
   ]
 }
