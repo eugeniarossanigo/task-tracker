@@ -1,15 +1,16 @@
 import {PropTypes} from 'prop-types' 
 import Button from './Button'
+import { useLocation } from 'react-router-dom'
 
 export default function Header({ title, handleOpen, open }) {
-    const handleAdd = () => {
-        console.log('hi')
-    }
+    const location = useLocation()
 
     return (
         <header className='header'>
             <h1>{title}</h1>
-            <Button text={open ? 'Close' : 'Add Task'} handleAdd={handleAdd} handleOpen={handleOpen}/>
+            {location.pathname === '/' && 
+                <Button text={open ? 'Close' : 'Add Task'} handleOpen={handleOpen}/>
+            }
         </header>
     )
 }

@@ -1,9 +1,12 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 // import { tasks as data } from './data/tasks'
 import AddTask from './components/AddTask'
+import Footer from './components/Footer'
+import About from './components/About'
 
 function App() {
     const [tasks, setTasks] = useState([])
@@ -60,18 +63,28 @@ function App() {
     }
 
     return (
-        <div className='container'>
-            <Header handleOpen={handleOpen} open={open}/>
-            {/* <Header handleOpen={() => setOpen(!open) }/> */}
-            { open && <AddTask handleAdd={handleAdd}/> }
-            <main>
-                { tasks.length > 0 ?
-                    <Tasks tasks={tasks} handleDelete={handleDelete} toogleReminder={toogleReminder} />
-                    :
-                    <p>No tasks</p>
-                }
-            </main>
-        </div>
+        <Router>
+            <div className='container'>
+                <Header handleOpen={handleOpen} open={open}/>
+                {/* <Header handleOpen={() => setOpen(!open) }/> */}
+                <Routes>
+                    <Route path='/' exact render={(props) => (
+                        <>
+                            { open && <AddTask handleAdd={handleAdd}/> }
+                            <main>
+                            { tasks.length > 0 ?
+                                <Tasks tasks={tasks} handleDelete={handleDelete} toogleReminder={toogleReminder} />
+                                :
+                                <p>No tasks</p>
+                            }
+                            </main>
+                        </>
+                    )}  />
+                    <Route path='/about' element={<About />} />
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
     )
 }
 
