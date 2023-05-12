@@ -16,6 +16,7 @@ export default function AddTask({ handleAdd }) {
             return
         }
         handleAdd({text, day, reminder})
+        // console.log(text, day, reminder)
         setText('')
         setDay('')
         setReminder(false)
