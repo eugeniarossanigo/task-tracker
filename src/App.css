@@ -1,8 +1,9 @@
 .container {
   width: 600px;
-  background-color: rgb(239, 250, 242);
+  background-color: #F2F2EF;
   margin: 0 auto;
   padding: 0 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1rem;
 }
 .header {
