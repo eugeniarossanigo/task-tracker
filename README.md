@@ -1,11 +1,20 @@
 ## Task Tracker
 
-###### traversy react course 2021 (update 2022)
+###### Traversy media react course 2021 (update 2022)
 
+### Installation
 You can clone the project and in the project directory you can run:
-### `npm i`
+```bash
+npm i
+```
 
+### Usage
+In one terminal you run:
+```bash
+npm run server
+```
 
-In one terminal you run: `npm run server`
-
-And in another: `npm run dev`
+And in another:
+```bash
+npm run dev
+```
