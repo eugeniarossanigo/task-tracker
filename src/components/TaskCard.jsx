@@ -5,7 +5,10 @@ export default function TaskCard({ task, handleDelete, toogleReminder }) {
   return (
     <div className={`task-container ${task.reminder ? 'task-reminder' : ''}`} onDoubleClick={() => toogleReminder(task.id)}>
       <h3>{task.text} <FaTimes onClick={() => handleDelete(task.id)}/></h3>
-      <p>{task.day}</p>
+      <div>
+        <p>{task.day} {task.hour}</p>
+        <p>{task.hour}</p>
+      </div>
       <Linkrouter to={`/task/${task.id}`}>Details</Linkrouter>
     </div>
   )

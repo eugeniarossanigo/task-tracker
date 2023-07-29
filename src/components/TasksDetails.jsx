@@ -34,8 +34,12 @@ export default function TasksDetails() {
     <h3>Loading... </h3>
     :
     <div className='task-container'>
+      <div>
+        <p>{task.day}</p>
+        <p>{task.hour}</p>
+      </div>
       <h3>{task.text}</h3>
-      <p>{task.day}</p>
+      <p className='details'>{task.details}</p>
       <Linkrouter to='/'>Go Back</Linkrouter>
       {/* <Button onClick={() => navigate(-1)} text='Go Back' /> */}
     </div>
