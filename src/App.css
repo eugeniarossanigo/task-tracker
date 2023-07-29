@@ -2,7 +2,7 @@
   width: 600px;
   background-color: #F2F2EF;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 1rem;
 }
@@ -19,6 +19,7 @@
   border: none;
   border-radius: .5rem;
   padding: .5rem 1rem;
+  font-size: .9rem;
   font-weight: 600;
 }
 .btn-add {
@@ -39,6 +40,28 @@ main {
 .task-container h3 {
   display: flex;
   justify-content: space-between;
+  font-size: 1.1rem;
+}
+.task-container div {
+  display: flex;
+  font-size: .8rem;
+  gap: .5rem;
+}
+.task-container div p {
+  color: rgb(155, 101, 30);
+  /* color: rgb(51, 92, 92); */
+  font-weight: 600;
+  /* padding: .2rem .5rem; */
+  /* background-color: rgb(241, 233, 217); */
+  border-radius: .5rem;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.task-container p.details {
+  font-size: .9rem;
+  padding-bottom: .5rem;
+  color: rgb(92, 88, 88)
 }
 .task-container svg {
   color: red;
@@ -49,27 +72,61 @@ main {
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
+  gap: .8rem;
   padding-bottom: 2rem;
 }
-.form-container div label {
+.form-container fieldset, .form-container fieldset div  {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-container fieldset.day-time {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-container fieldset div {
+  width: 48%;
+}
+/* .form-container div label {
   display: inline-block;
   padding-right: .8rem;
-}
-.form-container div input:nth-child(1) {
+} */
+/* .form-container div label {
+  padding-right: .8rem;
+} */
+/* .form-container div input:nth-child(1) {
   width: 40vw;
+} */
+.form-container input:not([type="checkbox"]) {
+  padding: .3rem;
+  font-size: .9rem;
+  border: 1px solid rgba(47, 79, 79, 0.445);
+  border-radius: .5rem;
+  width: 100%;
+}
+input[type="checkbox"] {
+  margin-right: .5rem;
 }
 .btn-save {
   background-color: orangered;
   color: #fff;
+  padding: .5rem 2rem;
+  font-size: 1rem;
 }
 footer {
   padding-bottom: 1rem;
   text-align: center;
   font-size: .8rem;
 }
-a {
-  text-decoration: none;
-  color: darkslategrey;
-  font-size: .7rem;
+a:hover {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 650px){
+  .container {
+    width: 90%;
+    padding: 0 2rem;
+  }
 }
