@@ -42,28 +42,21 @@ main {
   justify-content: space-between;
   font-size: 1.1rem;
 }
-.task-container div {
-  display: flex;
+.task-container p {
+  color: rgb(155, 101, 30);
+  font-weight: 600;
   font-size: .8rem;
   gap: .5rem;
 }
-.task-container div p {
-  color: rgb(155, 101, 30);
-  /* color: rgb(51, 92, 92); */
-  font-weight: 600;
-  /* padding: .2rem .5rem; */
-  /* background-color: rgb(241, 233, 217); */
-  border-radius: .5rem;
-  /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+.task-container p span {
+  color: orangered;
 }
 .task-container p.details {
   font-size: .9rem;
   padding-bottom: .5rem;
   color: rgb(92, 88, 88)
 }
-.task-container svg {
+.task-container h3 svg {
   color: red;
 }
 .task-reminder {
@@ -89,17 +82,7 @@ main {
 .form-container fieldset div {
   width: 48%;
 }
-/* .form-container div label {
-  display: inline-block;
-  padding-right: .8rem;
-} */
-/* .form-container div label {
-  padding-right: .8rem;
-} */
-/* .form-container div input:nth-child(1) {
-  width: 40vw;
-} */
-.form-container input:not([type="checkbox"]) {
+.form-container input:not([type="checkbox"]), textarea {
   padding: .3rem;
   font-size: .9rem;
   border: 1px solid rgba(47, 79, 79, 0.445);

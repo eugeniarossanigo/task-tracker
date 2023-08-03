@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
-// import { tasks as data } from './data/tasks'
 import AddTask from './components/AddTask'
 import Footer from './components/Footer'
 import About from './components/About'
@@ -67,7 +66,6 @@ function App() {
     <Router>
       <div className='container'>
         <Header handleOpen={handleOpen} open={open}/>
-        {/* <Header handleOpen={() => setOpen(!open) }/> */}
         <Routes>
           <Route path='/' element={
           <>

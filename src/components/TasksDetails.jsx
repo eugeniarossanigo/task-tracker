@@ -4,7 +4,6 @@ import { useParams, Link as Linkrouter, useNavigate } from 'react-router-dom'
 export default function TasksDetails() {
   const [task, setTask] = useState({})
   const [loading, setLoading] = useState(true)
-  // const [error, setError] = useState(null)
   const params = useParams()
   const navigate = useNavigate()
 
@@ -14,7 +13,6 @@ export default function TasksDetails() {
       const data = await res.json()
       
       if (res.status === 404) {
-          // setError('Task not found')
           navigate('/')
       }
 
@@ -25,23 +23,21 @@ export default function TasksDetails() {
     fetchTask()
   }, [params.id])
 
-    // if (error) {
-    //     return <Navigate to='/' />
-    // }
+  const date = new Date(task.day).toUTCString().split(' 00:00')[0]
 
   return (
     loading ? 
     <h3>Loading... </h3>
     :
     <div className='task-container'>
-      <div>
-        <p>{task.day}</p>
-        <p>{task.hour}</p>
-      </div>
+      <p>{date} <span>at {task.hour}</span></p>
       <h3>{task.text}</h3>
       <p className='details'>{task.details}</p>
-      <Linkrouter to='/'>Go Back</Linkrouter>
-      {/* <Button onClick={() => navigate(-1)} text='Go Back' /> */}
+      <Linkrouter to='/'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="1rem" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+        </svg>
+      </Linkrouter>
     </div>
   )
 }

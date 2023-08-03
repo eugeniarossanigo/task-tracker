@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom'
 
 export default function Header({ title, handleOpen, open }) {
   const location = useLocation()
-  // const { pathname } = useLocation()
 
   return (
     <header className='header'>
