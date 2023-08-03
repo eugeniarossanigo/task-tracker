@@ -1,34 +1,28 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Doctors Appointment",
-      "day": "Feb 5th at 2:30pm",
-      "reminder": true
-    },
-    {
-      "id": 2,
-      "text": "Meeting at School",
-      "day": "Feb 6th at 1:30pm",
-      "reminder": true
-    },
-    {
-      "id": 3,
-      "text": "Food Shopping",
-      "day": "Feb 5th at 2:30pm",
-      "reminder": false
-    },
-    {
-      "text": "fsdfds",
-      "day": "sdfsdfsdf",
+      "text": "Meeting with client",
+      "day": "2023-09-20",
+      "hour": "10:30",
+      "details": "Bring the updated presentation. Remember to ask about the new colors in the design",
       "reminder": true,
-      "id": 5
+      "id": 1
     },
     {
-      "text": "asdsd",
-      "day": "dasdsad",
+      "text": "Doctors Appointment",
+      "day": "2023-08-30",
+      "hour": "11:30",
+      "details": "Take latest tests to the doctor.",
+      "reminder": true,
+      "id": 2
+    },
+    {
+      "text": "Get a ticket",
+      "day": "2023-08-16",
+      "hour": "17:00",
+      "details": "Ticket for the trip in November 25th",
       "reminder": false,
-      "id": 6
+      "id": 3
     }
   ]
 }
