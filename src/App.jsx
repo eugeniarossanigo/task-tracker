@@ -72,9 +72,9 @@ function App() {
             { open && <AddTask handleAdd={handleAdd}/> }
             <main>
             { tasks.length > 0 ?
-                <Tasks tasks={tasks} handleDelete={handleDelete} toogleReminder={toogleReminder} />
-                :
-                <p>No tasks</p>
+              <Tasks tasks={tasks} handleDelete={handleDelete} toogleReminder={toogleReminder} />
+              :
+              <p>No tasks</p>
             }
             </main>
           </>
